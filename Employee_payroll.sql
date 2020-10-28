@@ -26,3 +26,6 @@ select salary from employee_payroll where name='Bill';
 
 select * from employee_payroll where start between date '2018-01-03'
  and date(NOW());
+#UC6
+alter table employee_payroll add gender char(1)  not null after name;
+UPDATE  employee_payroll set gender ='M' WHERE name='Bill' or name='Charlie';
