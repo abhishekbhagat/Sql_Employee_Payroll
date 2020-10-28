@@ -17,3 +17,6 @@ insert into  employee_payroll (name ,salary,start) values
 ('Bill' ,12345,'2018-01-03'),
 ('Terisa',20000,'2018-11-13'),
 ('charlie',3940309,'2018-12-21');
+
+#UC4
+select *  from employee_payroll;
