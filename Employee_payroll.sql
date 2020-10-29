@@ -29,3 +29,11 @@ select * from employee_payroll where start between date '2018-01-03'
 #UC6
 alter table employee_payroll add gender char(1)  not null after name;
 UPDATE  employee_payroll set gender ='M' WHERE name='Bill' or name='Charlie';
+
+#UC7
+SELECT sum(salary) FROM  employee_payroll WHERE gender ='M' GROUP BY gender;
+SELECT avg(salary) FROM  employee_payroll WHERE gender ='M' GROUP BY gender;
+SELECT min(salary) FROM  employee_payroll WHERE gender ='M' GROUP BY gender;
+SELECT max(salary) FROM  employee_payroll WHERE gender ='M' GROUP BY gender;
+SELECT COUNT(gender) FROM  employee_payroll WHERE gender ='F' GROUP BY gender;
+SELECT COUNT(gender) FROM  employee_payroll WHERE gender ='M' GROUP BY gender;
