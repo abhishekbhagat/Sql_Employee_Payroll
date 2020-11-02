@@ -42,3 +42,9 @@ SELECT COUNT(gender) FROM  employee_payroll WHERE gender ='M' GROUP BY gender;
 alter table employee_payroll add phone_number varchar(300)  not null after start;
 alter table employee_payroll add address varchar(300)  default 'Katras'  after phone_number;
 alter table employee_payroll add department varchar(300)  not null  after address;
+
+#UC9
+alter table employee_payroll add basic_pay varchar(200)  not null after deductions;
+alter table employee_payroll add taxable_pay varchar(200)  not null after basic_pay;
+alter table employee_payroll add income_tax varchar(200)  not null after taxable_pay;
+alter table employee_payroll add net_pay varchar(200)  not null after income_tax;
