@@ -37,3 +37,8 @@ SELECT min(salary) FROM  employee_payroll WHERE gender ='M' GROUP BY gender;
 SELECT max(salary) FROM  employee_payroll WHERE gender ='M' GROUP BY gender;
 SELECT COUNT(gender) FROM  employee_payroll WHERE gender ='F' GROUP BY gender;
 SELECT COUNT(gender) FROM  employee_payroll WHERE gender ='M' GROUP BY gender;
+
+#UC8
+alter table employee_payroll add phone_number varchar(300)  not null after start;
+alter table employee_payroll add address varchar(300)  default 'Katras'  after phone_number;
+alter table employee_payroll add department varchar(300)  not null  after address;
