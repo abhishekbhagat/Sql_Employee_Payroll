@@ -48,3 +48,7 @@ alter table employee_payroll add basic_pay varchar(200)  not null after deductio
 alter table employee_payroll add taxable_pay varchar(200)  not null after basic_pay;
 alter table employee_payroll add income_tax varchar(200)  not null after taxable_pay;
 alter table employee_payroll add net_pay varchar(200)  not null after income_tax;
+
+#UC10
+insert into  employee_payroll (name ,salary,start,department,gender,phone_number,deductions,basic_pay,taxable_pay,income_tax,net_pay) values
+('Terisa',20000,'2018-11-13','Sales','F','0','0','0','0','0','0'),('Terisa',20000,'2018-11-13','Department','F','0','0','0','0','0','0');
