@@ -115,3 +115,21 @@ INSERT INTO department VALUES
 INSERT INTO employee_department VALUES  				
 (1,100),
 (1,200);
+
+#uc12
+select * from employee;
+select * from company;
+select * from payroll;
+select * from  department;
+select * from employee_department;
+
+select basic_pay from payroll p,employee e where e.emp_id=p.emp_id and  name='Bill';
+
+UPDATE  employee set gender ='M' WHERE name='Bill' or name='Charlie';
+
+SELECT sum(basic_pay) FROM  payroll p , employee e WHERE e.emp_id=p.emp_id and gender ='M' GROUP BY gender;
+SELECT avg(basic_pay) FROM  payroll ,employee e WHERE e.emp_id=p.emp_id and gender ='M' GROUP BY gender;
+SELECT min(basic_pay) FROM  payroll ,employee e WHERE e.emp_id=p.emp_id and gender ='M' GROUP BY gender;
+SELECT max(basic_pay) FROM  payroll ,employee e WHERE e.emp_id=p.emp_id and gender ='M' GROUP BY gender;
+SELECT COUNT(gender) FROM  employee  WHERE gender ='F' GROUP BY gender;
+SELECT COUNT(gender) FROM  employee WHERE gender ='M' GROUP BY gender;
